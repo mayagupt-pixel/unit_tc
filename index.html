@@ -32,15 +32,22 @@
 
 
       <!--Basic code-->
-      <tr>
-        <td>Verilog</td>
-        <td></td>
-<td>-  </td>
-</tr>
+
 
 <tr>
   <td>Verilog</td>
-  <td></td>
+  <td>module unit (d, a,clk, z, y);</br>
+input d, a, clk;</br>
+output z, y;</br>
+wire  c, e ;</br></br>
+
+
+
+DFFHQX1 dflp (.Q(c), .D(d), .CK(clk));</br>
+CLKINVX1 clinv (.Y(e), .A(clk));</br>
+DFFHQX2 dflp2 (.Q(z), .D(c), .CK(e));</br>
+BUFX12 bu12 (.Y(y), .A(a));</br>
+endmodule</td>
 <td>-  </td>
 </tr>
 
