@@ -53,10 +53,10 @@ endmodule</td>
 
 <tr>
   <td>read_sdc</td>
-  <td>create_clock [get_ports {ck}]  -name clk   -period 2  -waveform {0 1}</br>
-    set_interactive_constraint_modes [all_constraint_modes -active]</br>
+  <td>> create_clock [get_ports {ck}]  -name clk   -period 2  -waveform {0 1}</br>
+    > set_interactive_constraint_modes [all_constraint_modes -active]</br>
 
-set_propagated_clock [all_clocks]
+> set_propagated_clock [all_clocks]
 
 
                            </td>
@@ -65,7 +65,7 @@ set_propagated_clock [all_clocks]
 
 <tr>
   <td>MMMC</td>
-  <td></td>
+  <td>Sample File</td>
 <td>-  </td>
 </tr>
 <tr>
@@ -88,9 +88,10 @@ set_propagated_clock [all_clocks]
   <td>
     read_lib -lef <> </br>
     read_verilog <></br>
-    read_lib <></br>
+    #read_lib <></br>
     set_top_module <> -ignore_undefined_cell </br>
-    read_sdc <></br>
+    #read_sdc <></br>
+    read_view_definition <></br>
     report_power
         </td>
 <td>-  </td>
