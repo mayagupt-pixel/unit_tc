@@ -52,6 +52,18 @@ endmodule</td>
 </tr>
 
 <tr>
+  <td>read_sdc</td>
+  <td>create_clock [get_ports {ck}]  -name clk   -period 2  -waveform {0 1}</br>
+    set_interactive_constraint_modes [all_constraint_modes -active]</br>
+
+set_propagated_clock [all_clocks]
+
+
+                           </td>
+<td> Use 'report_clocks' to get all clocks in design</td>
+</tr>
+
+<tr>
   <td>MMMC</td>
   <td></td>
 <td>-  </td>
