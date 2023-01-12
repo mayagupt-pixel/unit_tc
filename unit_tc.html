@@ -91,9 +91,10 @@ Check D_NET section. In this line you will have total cap of that net. </td>
     read_lib -lef <> </br>
     read_verilog <></br>
     #read_lib <></br>
+    read_view_definition <></br>
     set_top_module <> -ignore_undefined_cell </br>
     #read_sdc <></br>
-    read_view_definition <></br>
+    read_spef -rc_corner <> </br>
     report_power
         </td>
 <td>-  </td>
