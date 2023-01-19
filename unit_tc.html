@@ -86,7 +86,6 @@ Check D_NET section. In this line you will have total cap of that net. </td>
     One testbench for above verilog is:</br>
     <xmp>
   --------------------
-
   module tb;
   reg a, clk, d;
   wire z, y;
@@ -101,11 +100,7 @@ Check D_NET section. In this line you will have total cap of that net. </td>
   d=1'b0;
   end
   always #2 clk=~clk;
-
-
-
   endmodule
-
   --------------------
 </xmp>
   Step2: /grid/avs/install/xcelium/2109/latest//tools/bin/xrun tb.v -access +rwc -gui -v lib.v -clean
