@@ -82,34 +82,13 @@ Check D_NET section. In this line you will have total cap of that net. </td>
 </tr>
 <tr>
   <td>VCD</td>
-  <td>Step 1) First write testbech (ask verification team to write by providing them verilog netlist):</br>
-    One testbench for above verilog is:</br>
-    <xmp>
-  --------------------
-  module tb;
-  reg a, clk, d;
-  wire z, y;
-  design d1 (.a(a), .clk(clk), .d(d), .z(z), .y(y));
-  initial begin
-  $dumpfile("design.vcd");
-  $dumpvars(0, d1);
-  end
-  initial begin
-  clk=1'b0;
-  a=1'b1;
-  d=1'b0;
-  end
-  always #2 clk=~clk;
-  endmodule
-  --------------------
-</xmp>
-  Step2: /grid/avs/install/xcelium/2109/latest//tools/bin/xrun tb.v -access +rwc -gui -v lib.v -clean
+  <td> <a href = "https://mayagupt-pixel.github.io/gate_vcd/">1) Gate level VCD </a></br>
 
 
 
 </td>
 <td></br>
-Step 2)  </td>
+ </td>
 </tr>
 <tr>
   <td>Power Analysis flow</td>
